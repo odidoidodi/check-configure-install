@@ -9,7 +9,7 @@ if [[ -f /etc/os-release ]]; then
 		echo `sudo apt install -y  apache2  mysql-server`
 		echo `sudo systemctl start apache2.service`
 		echo `sudo systemctl status apache2.service`
-	elif [$distro = 'centos' ]
+	elif [ $distro = 'centos' ]
 	then
 		echo `sudo yum update`
 		echo `sudo yum  install httpd mysql-server -y`
