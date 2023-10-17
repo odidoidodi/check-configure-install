@@ -1,3 +1,4 @@
-## Switching keyboard lights on Wayland session.The Command my vary due different inputs.I my case is "input2"  
+## Switching keyboard lights on Wayland session.The Command my vary due different inputs.I my case is "input2" 
+## Credit to UMLAUTaxl  from: https://gist.github.com/ps1dr3x/b15c62eafb388ddf8bb7d3896d1a1cee?permalink_comment_id=2975873#gistcomment-2975873
 #!/bin/bash
-sudo tee /sys/class/leds/input2\:\:scrolllock/brightness 
+echo 'switch on' | sudo tee /sys/class/leds/input2\:\:scrolllock/brightness 
