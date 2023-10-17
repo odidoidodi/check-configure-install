@@ -1,0 +1,3 @@
+## Switching keyboard lights on Wayland session.The Command my vary due different inputs.I my case is "input2"  
+#!/bin/bash
+sudo tee /sys/class/leds/input2\:\:scrolllock/brightness 
