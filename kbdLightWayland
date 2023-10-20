@@ -1,8 +1,9 @@
 ## Credit to UMLAUTaxl  from: https://gist.github.com/ps1dr3x/b15c62eafb388ddf8bb7d3896d1a1cee?permalink_comment_id=2975873#gistcomment-2975873
 ## This is modified script to switch on automatically keyboard lights on Wayland session.The Command my vary due different inputs (on witch usb port is connected the keyboard).I my case is "input3".
 ## Adding "sleep" to delay execution of the service.
-
+## make it executable :)
 ## Create startup service in '/etc/system/system/name_of_the service' with following content:
+
 ## [Unit]
 ## Description=Run Startup Script
 
@@ -12,8 +13,7 @@
 ## [Install]
 ## WantedBy=multi-user.target
 
-## make it executable :) 
-
+## Use enable and start systemd service commands 
 
 #!/bin/bash
 sleep 6 && echo 1 | sudo tee /sys/class/leds/input3\:\:scrolllock/brightness 
