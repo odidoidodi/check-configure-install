@@ -6,5 +6,5 @@ prefix="'"
 suffix="'"
 string=${kbd}
 lightON=${string#"$prefix"}
-lightON=${foo%"$suffix"}
+lightON=${string%"$suffix"}
 echo `brightnessctl --device="${lightON}" set 1`
