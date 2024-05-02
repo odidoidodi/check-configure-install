@@ -1,2 +1,8 @@
 #!/bin/bash
-echo `xmodmap -e 'add mod3 = Scroll_Lock'`
+kbd=`brightnessctl --list | grep scrolllock | cut -d ' ' -f 2`
+prefix="'"
+suffix="'"
+string=${kbd}
+lightON=${string#"$prefix"}
+lightON=${foo%"$suffix"}
+echo `brightnessctl --device="${lightON}" set 1
