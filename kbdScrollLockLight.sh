@@ -6,6 +6,6 @@ prefix="'"
 suffix="'"
 string=${kbd}
 lightON=${string#"$prefix"}
-lightON=${string%"$suffix"}
+lightON=${lightON%"$suffix"}
 sleep 5 && brightnessctl --device="${lightON}" set 1
 
