@@ -7,5 +7,5 @@ suffix="'"
 string=${kbd}
 lightON=${string#"$prefix"}
 lightON=${lightON%"$suffix"}
-sleep 5 && brightnessctl --device="${lightON}" set 1
+echo `sleep 5 && brightnessctl --device="${lightON}" set 1`
 
